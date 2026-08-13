@@ -4,7 +4,7 @@
    Variable Declaration
 ========================= */
 
-use std::fmt::format;
+use std::{collections::HashMap, fmt::format};
 
 fn variable_declaration() {
     // Rust — immutable by default, statically typed
@@ -185,11 +185,76 @@ fn string_manip() {
     // - String literals     → automatically &str
 }
 
+// Printing and String Formatting
+
+fn print_n_str_format() {
+    let name = "Alice";
+    let age = 35;
+
+    println!("Hello, World!");
+    println!("Name: {} Age: {}", name, age); // Positional {}
+    println!("Name: {name}, Age: {age}"); // Inline variables (Rust 1.58+, like f-strings!);       // Inline variables (Rust 1.58+, like f-strings!)
+
+    // Format Specifiers
+    // Rust formatting (very similar to Python!)
+    println!("{:.2}", 3.14159); // "3.14" — 2 decimal places
+    println!("{:05}", 402); // "00042" — zero-padded
+    println!("{:#x}", 255); // "0xff" — hex
+    println!("{:>10}", 42); // "        42" — right-aligned
+    println!("{:<10}|", "left"); // "left      |" — left-aligned
+}
+
+//Debug Printing
+fn debug_print() {
+    // Rust — {:?} and {:#?}
+    println!("{:?}", vec![1, 2, 3]); // "[1, 2, 3]" — Debug format
+    println!("{:#?}", vec![1, 2, 3]); // Pretty-printed Debug format
+
+    // To make your types printable, derive Debug:
+    #[derive(Debug)]
+    struct Point {
+        x: f64,
+        y: f64,
+    }
+
+    let p = Point { x: 1.0, y: 2.0 };
+    println!("{:?}", p); // "Point { x: 1.0, y: 2.0 }"
+    println!("{p:?}"); // Same, with inline syntax
+}
+
+// Type Annotations
+fn annotate() {
+    fn add(a: i32, b: i32) -> i32 {
+        a + b
+    }
+
+    add(1, 2); // ✅
+    // add("a", "b");  // ❌ Compile error: expected i32, found &str
+
+    // Optional values use Option<T>
+    fn find(key: &str) -> Option<i32> {
+        // Returns Some(value) or None
+        Some(42)
+    }
+
+    // Generic types
+    fn first(items: &[i32]) -> Option<i32> {
+        items.first().copied()
+    }
+
+    // Type aliases
+    type UserId = i64;
+    type Mapping = HashMap<String, Vec<i32>>;
+}
+
 /* =========================
    MAIN — Run Current Concept
 ========================= */
 
 fn main() {
+    annotate();
+    // debug_print();
+    // print_n_str_format();
     // string_manip();
     // use_greet();
     // string_types();
@@ -198,3 +263,5 @@ fn main() {
     // data_types();
     // sizes();
 }
+
+// Key insight: In Python, type hints help your IDE and mypy but don’t affect runtime. In Rust, types ARE the program — the compiler uses them to guarantee memory safety, prevent data races, and eliminate null pointer errors.
