@@ -1,7 +1,7 @@
 #![allow(unused)]
 
 /* =========================
-   CODE 1 — Hello World
+  ⭕   CODE 1 — Hello World
 ========================= */
 
 fn hello_world() {
@@ -9,7 +9,7 @@ fn hello_world() {
 }
 
 /* =========================
-   CODE 2 — Variables and Mutability Keywords
+  ⭕   CODE 2 — Variables and Mutability Keywords
 ========================= */
 
 fn variables_and_mutability() {
@@ -28,7 +28,7 @@ fn variables_and_mutability() {
 }
 
 /* =========================
-   CODE 3 — Ownership and Borrowing Keywords
+   ⭕  CODE 3 — Ownership and Borrowing Keywords
 ========================= */
 
 fn ownership_and_borrowing() {
@@ -57,7 +57,7 @@ fn ownership_and_borrowing() {
 }
 
 /* =========================
-   CODE 4 — Type Definition Keywords
+  ⭕   CODE 4 — Type Definition Keywords
 ========================= */
 
 fn type_definitions() {
@@ -89,7 +89,7 @@ fn type_definitions() {
 }
 
 /* =========================
-   CODE 5 — Control Flow Keywords
+  ⭕   CODE 5 — Control Flow Keywords
 ========================= */
 
 fn control_flow() {
@@ -131,7 +131,7 @@ fn control_flow() {
 }
 
 /* =========================
-   CODE 6 — Visibility Keywords
+  ⭕   CODE 6 — Visibility Keywords
 ========================= */
 
 fn visibility() {
@@ -156,7 +156,7 @@ fn visibility() {
 }
 
 /* =========================
-   MAIN — Run Current Concept
+   ⭕  MAIN — Run Current Concept
 ========================= */
 
 fn main() {

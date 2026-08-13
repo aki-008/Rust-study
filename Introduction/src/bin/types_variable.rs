@@ -1,7 +1,7 @@
 #![allow(unused)]
 
 /* =========================
-   Variable Declaration
+  ⭕   Variable Declaration
 ========================= */
 
 use std::{collections::HashMap, fmt::format};
@@ -35,7 +35,7 @@ fn variable_declaration() {
 }
 
 /* =========================
-   Counter
+  ⭕  Counter
 ========================= */
 
 struct Counter {
@@ -65,7 +65,7 @@ fn counter() {
 }
 
 /* =========================
-   Data Types
+  ⭕  Data Types
 ========================= */
 
 fn data_types() {
@@ -82,7 +82,7 @@ fn data_types() {
     println!(" i32: {x} ,\n f64: {y},\n i128: {big},\n million: {million},\n a: {a},\n b:  {b}");
 }
 
-// Size Types (Important!)
+// ⭕ Size Types (Important!)
 fn sizes() {
     // usize and isize — pointer-sized integers, used for indexing
     let length: usize = vec![1, 2, 3].len(); // .len() returns usize
@@ -95,7 +95,7 @@ fn sizes() {
     // let item = vec[i as usize]; // ✅ Explicit conversion
 }
 
-// Type inference
+// ⭕  Type inference
 fn type_inf() {
     // Rust infers types but they're FIXED — not dynamic
     let x = 42; // Compiler infers i32 (default integer type)
@@ -112,7 +112,7 @@ fn type_inf() {
     // x = "hello";      // ❌ Error: expected integer, found &str
 }
 
-// String Types: String vs &str
+// ⭕  String Types: String vs &str
 // This is one of the biggest surprises for Python developers. Rust has two main string types where Python has one.
 
 fn string_types() {
@@ -185,7 +185,7 @@ fn string_manip() {
     // - String literals     → automatically &str
 }
 
-// Printing and String Formatting
+// ⭕  Printing and String Formatting
 
 fn print_n_str_format() {
     let name = "Alice";
@@ -204,7 +204,7 @@ fn print_n_str_format() {
     println!("{:<10}|", "left"); // "left      |" — left-aligned
 }
 
-//Debug Printing
+// ⭕ Debug Printing
 fn debug_print() {
     // Rust — {:?} and {:#?}
     println!("{:?}", vec![1, 2, 3]); // "[1, 2, 3]" — Debug format
@@ -222,7 +222,7 @@ fn debug_print() {
     println!("{p:?}"); // Same, with inline syntax
 }
 
-// Type Annotations
+// ⭕  Type Annotations
 fn annotate() {
     fn add(a: i32, b: i32) -> i32 {
         a + b
@@ -248,7 +248,7 @@ fn annotate() {
 }
 
 /* =========================
-   MAIN — Run Current Concept
+   ⭕  MAIN — Run Current Concept
 ========================= */
 
 fn main() {
