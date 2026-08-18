@@ -65,7 +65,7 @@ fn rs_arr() {
     );
 }
 
-// Array slicing
+//  ⭕ Array slicing
 fn arr_slice() {
     // Rust slicing — creates views (references)
     let data = [1, 2, 3, 4, 5, 6, 7, 5, 6, 8];
@@ -156,7 +156,7 @@ impl Animal for Cat {
         format!("{} says Meow!", self.name)
     }
 }
-
+// Use trait objects for polymorphism (like Python's duck typing):
 fn animal_roll_call(animals: &[&dyn Animal]) {
     for a in animals {
         println!("{}", a.speak());
@@ -189,7 +189,7 @@ fn vec_list() {
     )
 }
 
-// list Common operations
+//  ⭕ list Common operations
 fn list_ops() {
     let mut nums = vec![1, 2, 3];
     nums.push(4); // [1, 2, 3, 4]
@@ -210,6 +210,7 @@ fn list_ops() {
     );
 }
 
+//  ⭕ Creating HashMaps
 fn hashmap_dict() {
     use std::collections::HashMap;
 
@@ -225,20 +226,20 @@ fn hashmap_dict() {
     let comprehension: HashMap<_, _> = keys.iter().zip(values.iter()).collect();
 }
 
+//  ⭕ Common Operations
 fn hash_ops() {
     use std::collections::HashMap;
 
     let mut d = HashMap::new();
     d.insert("a", 1);
     d.insert("b", 2);
-    d.insert("c", 3);
+    d.insert("c", 3); // Insert or overwrite
 
-    let val_a = d["a"];
-    let val_z = d.get("z").copied().unwrap_or(0);
+    let val_a = d["a"]; // 1 (panics if missing)
+    let val_z = d.get("z").copied().unwrap_or(0); // 0 (safe access)
 
-    d.remove("b");
-
-    let exists = d.contains_key("a");
+    d.remove("b"); // Remove
+    let exists = d.contains_key("a"); // true
     let keys: Vec<_> = d.keys().collect();
     let values: Vec<_> = d.values().collect();
     let length = d.len();

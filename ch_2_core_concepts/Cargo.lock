@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "rust-tutorial"
+name = "ch_2_core_concepts"
 version = "0.1.0"
