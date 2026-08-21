@@ -18,3 +18,5 @@ fn main() {
         }
     }
 }
+
+// Key takeaway: ? with .map_err() is Rust’s replacement for try/except ValueError as e: raise ConfigError(...) from e. Every error path is visible in the return type.
