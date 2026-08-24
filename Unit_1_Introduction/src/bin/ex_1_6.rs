@@ -1,3 +1,6 @@
+// 🏋️ Exercise: Shape Area Calculator (click to expand)
+// Challenge: Define an enum Shape with variants Circle(f64) (radius), Rectangle(f64, f64) (width, height), and Triangle(f64, f64) (base, height). Implement a method fn area(&self) -> f64 using match. Create one of each and print the area.
+
 #![allow(unused)]
 
 enum Shape {

@@ -1,3 +1,11 @@
+// Exercise: Parse Config Value (click to expand)
+// Challenge: Write a function parse_port(s: &str) -> Result<u16, String> that:
+
+// Rejects empty strings with error "empty input"
+// Parses the string to u16, mapping the parse error to "invalid number: {original_error}"
+// Rejects ports below 1024 with "port {n} is privileged"
+// Call it with "", "hello", "80", and "8080" and print the results.
+
 #![allow(unused)]
 
 fn parse_port(s: &str) -> Result<u16, String> {
