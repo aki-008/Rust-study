@@ -1,0 +1,1 @@
+this is a test file from vimtutor lesson 1.1.6 
